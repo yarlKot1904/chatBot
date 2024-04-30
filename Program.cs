@@ -1,8 +1,15 @@
+using chatBot.Data;
+using chatBot.Services;
+using chatBot.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<IPostsService, PostsService>();
+builder.Services.AddSingleton<MyDataContext>();
 
 var app = builder.Build();
 
