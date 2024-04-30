@@ -1,83 +1,53 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using chatBot.Models;
+using chatBot.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace chatBot.Controllers
 {
-    public class PostsController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PostsController : ControllerBase
     {
-        // GET: PostsController
-        public ActionResult Index()
+        private IPostsService _postService;
+
+        public PostsController(IPostsService postService)
         {
-            return View();
+            _postService = postService;
         }
 
-        // GET: PostsController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: PostsController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: PostsController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public PostModel Create(PostModel model)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return _postService.Create(model);
         }
 
-        // GET: PostsController/Edit/5
-        public ActionResult Edit(int id)
+        [HttpPatch]
+        public PostModel Update(PostModel model)
         {
-            return View();
+            return _postService.Update(model);
         }
 
-        // POST: PostsController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        [HttpGet("{id}")]
+        public PostModel Get(int id)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return _postService.Get(id);
         }
 
-        // GET: PostsController/Delete/5
-        public ActionResult Delete(int id)
+        [HttpGet]
+        public IEnumerable<PostModel> GetAll()
         {
-            return View();
+            return _postService.Get();
         }
 
-        // POST: PostsController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _postService.Delete(id);
+
+            return Ok();
         }
+
+
     }
 }
