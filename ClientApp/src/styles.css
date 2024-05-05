@@ -1,0 +1,109 @@
+/* Глобальные стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(230, 230, 230); /* Градиент фона */
+}
+
+/* Стили для чата */
+#chatContainer {
+    display: flex;
+    flex-direction: column; /* Элементы располагать сверху вниз */
+    height: 100vh; /* Полная высота экрана */
+    justify-content: space-between; /* Помещает элементы вверху и внизу */
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Позволяет прокрутку сообщений */
+}
+
+/* Контейнер для ввода */
+#inputArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Поле ввода */
+#message {
+    border-radius: 44px;
+    background: linear-gradient(270deg, rgb(81, 254, 117) 0.763%, rgb(61, 211, 92) 53.638%, rgb(52, 178, 78) 100%);
+    width: calc(100% - 100px); /* Полная ширина минус место для кнопки */
+
+    /* Размер шрифта */
+    font-size: 16px; /* Вы можете увеличить или уменьшить этот размер по желанию */
+
+    /* Высота равна высоте шрифта, с дополнительными отступами */
+    height: 40px; /* Определите высоту в соответствии с вашим размером шрифта и padding */
+
+    /* Расположение текста по центру по вертикали */
+    line-height: 2; /* Установите высоту строки */
+
+    display: flex;
+    align-items: center;
+}
+
+/* Кнопка отправки */
+button {
+    padding: 10px;
+    background-color: #8bc34a; /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Стили для сообщений */
+.messageContainer {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    display: flex;
+    text-align: left;
+}
+
+.userMessage {
+    background-color: rgb(123, 230, 146); /* Цвет фона для сообщений пользователя */
+    color: white;
+    padding: 10px;
+    max-width: 70%; /* Ограничиваем ширину сообщений */
+    margin-left: auto;
+}
+
+.botMessage {
+    background-color: #ffffff; /* Цвет фона для сообщений бота */
+    color: black;
+    padding: 10px;
+    max-width: 70%; /* Ограничиваем ширину сообщений */
+    margin-right: auto;
+}
+
+/* Кнопки в сообщениях бота */
+.buttonContainer {
+    display: flex;
+    flex-direction: column; /* Кнопки сверху вниз */
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-bottom: 5px; /* Разделение между кнопками */
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(197, 197, 197);
+    color: white;
+    cursor: pointer;
+}
+.send-button {
+    padding: 10px;
+    background-color: rgb(68, 223, 100); /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Жирный шрифт */
+    width: 80px; /* Ширина кнопки */
+    text-align: center; /* Центрирование текста на кнопке */
+}
+
+
