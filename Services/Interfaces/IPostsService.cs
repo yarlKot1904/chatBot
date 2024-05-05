@@ -1,4 +1,5 @@
-﻿using chatBot.Models;
+﻿using chatBot.Data;
+using chatBot.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace chatBot.Services.Interfaces

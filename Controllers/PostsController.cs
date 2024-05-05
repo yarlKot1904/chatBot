@@ -1,4 +1,5 @@
-﻿using chatBot.Models;
+﻿using chatBot.Data;
+using chatBot.Models;
 using chatBot.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

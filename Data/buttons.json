@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Button1",
+    "tags": [ "tag1", "tag2" ],
+    "URL": "https://example.com/button1"
+  },
+  {
+    "name": "Button2",
+    "tags": [ "tag3" ],
+    "URL": "https://example.com/button2"
+  },
+  {
+    "name": "Button3",
+    "tags": [ "tag1", "tag4" ],
+    "URL": "https://example.com/button3"
+  }
+]
