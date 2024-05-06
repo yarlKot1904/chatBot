@@ -22,14 +22,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    padding: 0;
+    margin: 0;
 }
 
 /* Поле ввода */
 #message {
     border-radius: 44px;
     background: linear-gradient(270deg, rgb(81, 254, 117) 0.763%, rgb(61, 211, 92) 53.638%, rgb(52, 178, 78) 100%);
-    width: calc(100% - 100px); /* Полная ширина минус место для кнопки */
+    width: calc(100% - 50px); /* Полная ширина минус место для кнопки */
 
     /* Размер шрифта */
     font-size: 16px; /* Вы можете увеличить или уменьшить этот размер по желанию */
@@ -40,17 +41,23 @@ body {
     /* Расположение текста по центру по вертикали */
     line-height: 2; /* Установите высоту строки */
 
+
+
     display: flex;
     align-items: center;
 }
 
+#message::placeholder{
+    color: rgba(255, 255, 255, 0.527);
+    letter-spacing: 0px;
+    text-align: left;
+}
+
 /* Кнопка отправки */
 button {
-    padding: 10px;
     background-color: #8bc34a; /* Цвет кнопки */
     color: white;
-    border: none;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
 }
 
@@ -89,21 +96,26 @@ button {
     padding: 5px 10px;
     margin-bottom: 5px; /* Разделение между кнопками */
     border: none;
-    border-radius: 5px;
     background-color: rgb(197, 197, 197);
     color: white;
     cursor: pointer;
 }
 .send-button {
     padding: 10px;
-    background-color: rgb(68, 223, 100); /* Цвет кнопки */
-    color: white;
+    background: transparent; /* Убедитесь, что фон прозрачный */
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold; /* Жирный шрифт */
-    width: 80px; /* Ширина кнопки */
+    font-weight: bold;
+    width: 100px; /* Ширина кнопки */
     text-align: center; /* Центрирование текста на кнопке */
+}
+/* .send-button-icon {
+    width: 24px;
+    height: 24px; 
+} */
+.command-button {
+    border-radius: 34px;
+    background: rgb(162, 161, 161);
 }
 
 

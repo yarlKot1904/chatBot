@@ -7,11 +7,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        AnswerManager.Instance.Init();
-        foreach (var button in AnswerManager.Instance.buttons)
-        {
-            Console.WriteLine(button.name);
-        }
+        InitData();
 
         var builder = WebApplication.CreateBuilder(args);
 
@@ -43,5 +39,22 @@ internal class Program
         app.MapFallbackToFile("index.html"); ;
 
         app.Run();
+    }
+
+    private static void InitData()
+    {
+        AnswerManager.Instance.Init();
+        foreach (var button in AnswerManager.Instance.buttons)
+        {
+            Console.WriteLine(button.name);
+        }
+        string baseDirectory = Directory.GetCurrentDirectory();
+
+        PersonDataManager personDataManager = new PersonDataManager();
+        string dataDirectory = Path.Combine(baseDirectory, "Data");
+        string filePath = Path.Combine(dataDirectory, "sampleData.json");
+
+        personDataManager.LoadFromJson(filePath);
+        Console.WriteLine(PersonDataManager.currentUser.Name);
     }
 }
