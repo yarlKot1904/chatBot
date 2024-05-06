@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using chatBot.Data;
+using System.Text;
 
 namespace chatBot.Answers
 {
@@ -14,6 +15,7 @@ namespace chatBot.Answers
             }
         }
         public List<Button> buttons { private set; get; }
+        public List<Command> commands { private set; get; }
 
 
         private AnswerManager()
@@ -28,8 +30,10 @@ namespace chatBot.Answers
 
             string dataDirectory = Path.Combine(baseDirectory, "Data");
             string filePath = Path.Combine(dataDirectory, "buttons.json");
+            string filePath2 = Path.Combine(dataDirectory, "commands.json");
 
             buttons = ButtonManager.InitializeButtons(filePath);
+            commands = ButtonManager.InitializeCommands(filePath2);
         }
 
         public HashSet<Button> GenerateButtons(string input)
@@ -54,6 +58,18 @@ namespace chatBot.Answers
 
         public string GenerateAnswer(string input)
         {
+            int balance = PersonDataManager.currentUser.Balance;
+            if (input[0] == '/')
+            {
+                Command command = commands.FirstOrDefault(x => x.Name == input);
+                if (command == null)
+                {
+                    return "Команда не найдена";
+                }
+                return command.Answer.Replace("{balance}", balance.ToString());
+            }
+
+
             HashSet<Button> buttons = GenerateButtons(input);
             if (buttons.Count == 0)
             {

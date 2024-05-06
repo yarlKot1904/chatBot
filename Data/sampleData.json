@@ -1,0 +1,28 @@
+[
+  {
+    "Name": "Kirill",
+    "Surname": "Pablov",
+    "Patronymic": "Kirillovich",
+    "Phone": "\u002B7999999999",
+    "Email": "kirill@mail.ru",
+    "Birthday": "1990-01-01",
+    "Gender": "male",
+    "Balance": 25000,
+    "Products": "electronic",
+    "Income": 10000,
+    "Spending": 5000
+  },
+  {
+    "Name": "Anuta",
+    "Surname": "Morozova",
+    "Patronymic": "Xddvna",
+    "Phone": "\u002B7999999998",
+    "Email": "anuta@mail.ru",
+    "Birthday": "1999-10-11",
+    "Gender": "male",
+    "Balance": 25000,
+    "Products": "electronic",
+    "Income": 10000,
+    "Spending": 5000
+  }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "name": "Button1",
+    "name": "Кнопка1",
     "tags": [ "tag1", "tag2" ],
     "URL": "https://example.com/button1"
   },
@@ -12,6 +12,11 @@
   {
     "name": "Button3",
     "tags": [ "tag1", "tag4" ],
+    "URL": "https://example.com/button3"
+  },
+  {
+    "name": "/Баланс",
+    "tags": [ "баланс", "бал", "деньги", "money" ],
     "URL": "https://example.com/button3"
   }
 ]
