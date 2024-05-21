@@ -1,0 +1,11 @@
+Name,Surname,Patronymic,Phone,Email,Birthday,Gender,Balance,Products,Month_1_Income,Month_1_Spending,Month_2_Income,Month_2_Spending,Month_3_Income,Month_3_Spending,Month_4_Income,Month_4_Spending,Month_5_Income,Month_5_Spending,Month_6_Income,Month_6_Spending
+Kirill,Pablov,Kirillovich,7999999999,kirill@mail.ru,1990-01-01,male,25000,electronic,5000,1000,6000,1500,7000,2000,8000,2500,9000,3000,10000,3500
+Anuta,Morozova,Xddvna,7999999998,anuta@mail.ru,1999-10-11,female,25000,electronic,4000,800,5000,900,6000,1000,7000,1100,8000,1200,9000,1300
+Ivan,Ivanov,Ivanovich,7999999997,ivan@mail.ru,1985-05-15,male,30000,home,7000,2000,8000,2500,9000,3000,10000,3500,11000,4000,12000,4500
+Olga,Petrova,Olegovna,7999999996,olga@mail.ru,1992-08-22,female,35000,beauty,6000,1200,7000,1300,8000,1400,9000,1500,10000,1600,11000,1700
+Sergey,Smirnov,Sergeevich,7999999995,sergey@mail.ru,1980-03-30,male,40000,auto,8000,1500,9000,1600,10000,1700,11000,1800,12000,1900,13000,2000
+Elena,Popova,Alexandrovna,7999999994,elena@mail.ru,1975-12-10,female,45000,fashion,9000,1600,10000,1700,11000,1800,12000,1900,13000,2000,14000,2100
+Dmitry,Kuznetsov,Dmitrievich,7999999993,dmitry@mail.ru,1988-06-06,male,50000,sport,10000,1700,11000,1800,12000,1900,13000,2000,14000,2100,15000,2200
+Svetlana,Moroz,Semenovna,7999999992,svetlana@mail.ru,1994-04-18,female,55000,kids,11000,1800,12000,1900,13000,2000,14000,2100,15000,2200,16000,2300
+Andrey,Sokolov,Andreevich,7999999991,andrey@mail.ru,1978-02-25,male,60000,travel,12000,1900,13000,2000,14000,2100,15000,2200,16000,2300,17000,2400
+Marina,Volkova,Petrovna,7999999990,marina@mail.ru,1983-09-09,female,65000,food,13000,2000,14000,2100,15000,2200,16000,2300,17000,2400,18000,2500
